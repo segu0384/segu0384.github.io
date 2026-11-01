@@ -1,0 +1,32 @@
+
+body {
+    font-size: 18px;
+}
+
+header, footer{
+    background-color: red;
+}
+
+.page-link{
+    text-decoration: none;
+    background: pink; /* same results when typing "background-color: red;" */
+    border: 3px black;
+    
+}
+
+a.page-link:hover{
+    color: red;
+}
+
+li:nth-child(odd){
+    background-color: yellow;
+}
+
+.site-title{
+    color: white;
+}
+
+#my-image{
+    box-shadow:0px 0px 2px 1px black;
+    width: 500px; /* You cannot see the image because it is too big without this tag */
+}
