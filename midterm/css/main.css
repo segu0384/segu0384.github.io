@@ -2,25 +2,29 @@
     box-sizing: border-box;
 } 
 
-html {
+
+html { /* root */
     font-size: 16px;
 }
 
 body {
     font-family:Arial, Helvetica, sans-serif;
     background-color: lightblue;
+    /* removes the default bold style when using inherit */
+    font-weight: lighter; 
 }
 
 p {
     font-size: 1rem;
     line-height: 1.2em;
-    font-weight: lighter;
+    font-weight: inherit;
 }
 
 h1 {
     font-size: 3.2rem;
-    font-weight:inherit;
-    text-transform:capitalize;
+    font-weight: inherit;
+    /* capitalize so that everything can be typed in lowercase in index.html and auto capitalized */
+    text-transform:capitalize; 
 }
 
 h2 {
@@ -40,7 +44,8 @@ label {
     font-weight: inherit;
 }
 
-.multiplechoice label {
+.multiplechoice label { 
+    /* keep multiple choice labels aligned horizontally */
     display: inline-block;
 }
 
@@ -52,7 +57,7 @@ input {
 
 .multiplechoice input[type="radio"] {
     width: auto;
-    display: inline-block;
+    display: inline-block; 
 }
 
 textarea {
@@ -60,12 +65,14 @@ textarea {
     width: 100%;
     height: 100px;
     margin-top: 0.2rem;
-    border: 1px solid grey;
+    /* grey colour for the border to highlight the difference between textarea and regular inputs */
+    border: 1px solid grey; 
 }
 
 button {
     border: 1.7px solid black;
-    background-color: rgb(243, 255, 255);
+    /* set background of the button as the same as the wrapper background */
+    background-color: rgb(243, 255, 255); 
     padding: 10px;
 }
 
@@ -73,6 +80,7 @@ article {
     padding: 0.5rem;
 }
 
+/* class style for the main container */
 .wrapper {
     width: 880px;
     background-color: rgb(243, 255, 255);
@@ -84,15 +92,15 @@ nav ul {
     font-size: 0;
     margin: 0;
     padding-left: 0;
-    list-style-type: none;
+    list-style-type: none; 
 }
 
 nav li {
+    /* make text all capital letters */
     text-transform: uppercase;
     /* change block level property */
     display: inline-block;
     width: 33.333%;
-    /* usually change text in the link */
     font-size: 1.5rem;
     text-align: center;
     border-right: 1px solid black;
@@ -100,6 +108,7 @@ nav li {
 }
 
 nav li:last-child {
+    /* Removes the last border at the far right */
     border-right: none;
 }
 
@@ -118,7 +127,8 @@ nav li:last-child {
 }
 
 #yorkie-banner {
-    border-left: 2px solid black;
+    /* adds one small thin black border to the left of the banner */
+    border-left: 2px solid black; 
     width: 100%;
     height: 300px;
     position: relative;
@@ -134,7 +144,7 @@ nav li:last-child {
 aside::after {
     content: "";
     display: block;
-    clear: both;
+    clear: both; /* keeps everything properly wrapped around #yorkie-small */
 }
 
 .contact-fillin h2 {
@@ -146,12 +156,14 @@ aside::after {
 }
 
 .contact-fillin h3::first-letter {
-    text-transform: capitalize;
+    text-transform: capitalize; /* Capitalizes the first letter, alternatively it can be capitalized in index.html instead as well */
 }
 
 .container {
+    /* creates a thin container with a black border inside of the wrapper */
     border: 1.7px solid black;
     padding: 20px;
+    /* distances the inputs and labels from one another */
     line-height: 1.6em;
 }
 
