@@ -71,6 +71,7 @@ textarea {
 
 button {
     border: 1.7px solid black;
+    color: black;
     /* set background of the button as the same as the wrapper background */
     background-color: rgb(243, 255, 255); 
     padding: 10px;
